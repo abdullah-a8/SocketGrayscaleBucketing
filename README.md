@@ -135,7 +135,7 @@ Some screenshots showing the output of the system in action:
    > This screenshot shows the server receiving the raw image data, converting it to grayscale, partitioning it into 8 buckets, and sending them back to the client.
 
 3. **Client Output:**
-   ![Client Output](Images/client_output.png)
+   ![Client Output](Images/client_output1.png)
    > This screenshot illustrates the client sending the raw image, receiving the grayscale buckets, and merging them into a final image.
 
 4. **Final Grayscale Image:**
