@@ -21,7 +21,7 @@ I wanted to understand how to split a task between multiple systems. It’s amaz
 ## Technical Details
 
 **Programming Language & Environment:**  
-- **Language:** C++ (using C++11 standard)  
+- **Language:** C++
 - **Development Environment:**  
   - **Server:** Compiled and run on a Linux system using the `g++` compiler.  
   - **Client:** Developed on Android via Termux, compiled using `clang++`.  
@@ -85,7 +85,7 @@ I wanted to understand how to split a task between multiple systems. It’s amaz
    ```
 2. **Compile the Client:**
    ```bash
-   clang++ -std=c++11 -O2 client.cpp -o client
+   clang++ client.cpp -o client
    ```
 3. **Run the Client:**  
    The client uses a default image path of `/storage/emulated/0/Download/input.jpg` if none is provided. You can run:
@@ -134,8 +134,6 @@ I wanted to understand how to split a task between multiple systems. It’s amaz
 
 4. **Future Scalability:**  
    Once I have mastered the basics, I plan to explore more robust image processing solutions. In a future, more complex project, I’d definitely consider using OpenCV to leverage its built-in functionalities. For now, sticking with the current approach keeps the project focused and the setup straightforward.
-
-Below is an updated "Future Enhancements" section that incorporates plans for integrating OpenCV as well as extending the project to support multiple Android devices for distributed image processing:
 
 ## Future Enhancements
 
