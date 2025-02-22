@@ -127,19 +127,19 @@ I wanted to understand how to split a task between multiple systems. It’s amaz
 Some screenshots showing the output of the system in action:
 
 1. **Input Image (Sent by Client)**
-![Input Image](images/input_image.jpg)  
+![Input Image](Images/input.jpg)  
 > This is the original image selected by the client. The client reads this image from the specified path (`/storage/emulated/0/Download/input.jpg`), converts it to raw RGB format, and sends it to the server for processing.
 
 2. **Server Output:**
-   ![Server Output](images/server_output.png)
+   ![Server Output](Images/server_output1.png)
    > This screenshot shows the server receiving the raw image data, converting it to grayscale, partitioning it into 8 buckets, and sending them back to the client.
 
 3. **Client Output:**
-   ![Client Output](images/client_output.png)
+   ![Client Output](Images/client_output.png)
    > This screenshot illustrates the client sending the raw image, receiving the grayscale buckets, and merging them into a final image.
 
 4. **Final Grayscale Image:**
-   ![Final Grayscale Image](images/final_grayscale.jpg)
+   ![Final Grayscale Image](Images/gray_output.jpg)
    > This is the actual grayscale image saved by the client after merging all buckets.
 
 
