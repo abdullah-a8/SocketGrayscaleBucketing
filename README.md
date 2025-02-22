@@ -4,6 +4,8 @@
 
 As an assignment for my **Algorithms course at ITU**, I built a simple client-server system to learn the basics of socket programming and distributed computing. The goal is to process an image by converting it to grayscale and partitioning the data into 8 buckets—all over a network. In this system, the client converts an input image (JPG/PNG/etc.) to a raw RGB binary, sends it to the server, and the server processes the image (grayscale conversion and bucketing) and sends the results back. The client then merges the buckets, saves the final raw grayscale image, and converts it to a JPG using ImageMagick.
 
+![System Overview](Images/OverView_CS.png)
+
 ## Motivation and Intuition
 
 I wanted to understand how to split a task between multiple systems. It’s amazing to see how a simple image processing task can be divided across a network—a concept that scales up to more complex parallel and distributed computing systems. Through this project, I hope to share my learning experience and provide a solid starting point for anyone new to socket programming and distributed computing.
@@ -16,7 +18,6 @@ I wanted to understand how to split a task between multiple systems. It’s amaz
 - **Data Partitioning:** The server splits the grayscale image into 8 equal buckets, demonstrating simple data segmentation.
 - **Data Transmission & Merging:** The server sends the 8 buckets back to the client, which then merges them into a complete grayscale image.
 - **Final Conversion:** The client uses ImageMagick to convert the raw grayscale data back into a JPG image.
-- **Modular Code Structure:** Both the client and server code are organized into clear, easy-to-understand functions.
 
 ## Technical Details
 
@@ -120,6 +121,27 @@ I wanted to understand how to split a task between multiple systems. It’s amaz
 - **partitionIntoBuckets:** Splits the grayscale image into 8 equal buckets.
 - **printBucketsSummary:** Prints a summary of each bucket.
 - **sendBucketsData:** Sends the 8 buckets back to the client.
+
+## Output & Screenshots
+
+Some screenshots showing the output of the system in action:
+
+1. **Input Image (Sent by Client)**
+![Input Image](images/input_image.jpg)  
+> This is the original image selected by the client. The client reads this image from the specified path (`/storage/emulated/0/Download/input.jpg`), converts it to raw RGB format, and sends it to the server for processing.
+
+2. **Server Output:**
+   ![Server Output](images/server_output.png)
+   > This screenshot shows the server receiving the raw image data, converting it to grayscale, partitioning it into 8 buckets, and sending them back to the client.
+
+3. **Client Output:**
+   ![Client Output](images/client_output.png)
+   > This screenshot illustrates the client sending the raw image, receiving the grayscale buckets, and merging them into a final image.
+
+4. **Final Grayscale Image:**
+   ![Final Grayscale Image](images/final_grayscale.jpg)
+   > This is the actual grayscale image saved by the client after merging all buckets.
+
 
 ### Why Not OpenCV for This Project? (For Now)
 
